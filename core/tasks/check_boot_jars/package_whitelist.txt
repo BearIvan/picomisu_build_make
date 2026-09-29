@@ -242,3 +242,19 @@ com\.google\.vr\.platform.*
 # Packages used for Android in Chrome OS
 org\.chromium\.arc
 org\.chromium\.arc\..*
+
+###################################################
+# PICO OS 5.13.7 framework.jar API ported from the factory framework
+com\.pico\.api\.app
+com\.pico\.api\.os
+com\.pico\.util
+com\.pvr
+com\.pvr\.configuration
+com\.pxr\.bluetooth
+com\.pxr\.net
+com\.pxr\.net\.common\.log
+com\.pxr\.net\.common\.score
+com\.pxr\.net\.common\.utils
+com\.pxr\.net\.common\.wifi
+com\.pxr\.net\.util
+com\.pxr\.pxrapi
