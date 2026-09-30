@@ -421,4 +421,21 @@ $(foreach image, \
 
 product-build-image-config :=
 
+# Insert the jars that a product places directly before framework and
+# services on the boot and system server class paths.
+ifneq ($(PRODUCT_BOOT_JARS_BEFORE_FRAMEWORK),)
+  ifneq ($(words $(filter framework,$(PRODUCT_BOOT_JARS))),1)
+    $(error PRODUCT_BOOT_JARS_BEFORE_FRAMEWORK requires framework once in PRODUCT_BOOT_JARS)
+  endif
+  PRODUCT_BOOT_JARS := $(strip $(foreach j,$(PRODUCT_BOOT_JARS),\
+    $(if $(filter framework,$(j)),$(PRODUCT_BOOT_JARS_BEFORE_FRAMEWORK)) $(j)))
+endif
+ifneq ($(PRODUCT_SYSTEM_SERVER_JARS_BEFORE_SERVICES),)
+  ifneq ($(words $(filter services,$(PRODUCT_SYSTEM_SERVER_JARS))),1)
+    $(error PRODUCT_SYSTEM_SERVER_JARS_BEFORE_SERVICES requires services once in PRODUCT_SYSTEM_SERVER_JARS)
+  endif
+  PRODUCT_SYSTEM_SERVER_JARS := $(strip $(foreach j,$(PRODUCT_SYSTEM_SERVER_JARS),\
+    $(if $(filter services,$(j)),$(PRODUCT_SYSTEM_SERVER_JARS_BEFORE_SERVICES)) $(j)))
+endif
+
 $(call readonly-product-vars)

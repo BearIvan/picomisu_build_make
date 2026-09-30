@@ -203,6 +203,9 @@ _product_var_list += PRODUCT_VENDOR_KERNEL_HEADERS
 
 # A list of module names of BOOTCLASSPATH (jar files)
 _product_var_list += PRODUCT_BOOT_JARS
+# Module names of BOOTCLASSPATH jars placed directly before framework, in
+# this order (OEM framework extensions that precede framework.jar).
+_product_var_list += PRODUCT_BOOT_JARS_BEFORE_FRAMEWORK
 _product_var_list += PRODUCT_SUPPORTS_BOOT_SIGNER
 _product_var_list += PRODUCT_SUPPORTS_VBOOT
 _product_var_list += PRODUCT_SUPPORTS_VERITY
@@ -218,6 +221,9 @@ _product_var_list += PRODUCT_SYSTEM_PROPERTY_BLACKLIST
 _product_var_list += PRODUCT_VENDOR_PROPERTY_BLACKLIST
 _product_var_list += PRODUCT_SYSTEM_SERVER_APPS
 _product_var_list += PRODUCT_SYSTEM_SERVER_JARS
+# Module names of SYSTEMSERVERCLASSPATH jars placed directly before services,
+# in this order.
+_product_var_list += PRODUCT_SYSTEM_SERVER_JARS_BEFORE_SERVICES
 
 # All of the apps that we force preopt, this overrides WITH_DEXPREOPT.
 _product_var_list += PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK

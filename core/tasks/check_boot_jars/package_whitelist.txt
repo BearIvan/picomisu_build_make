@@ -261,4 +261,28 @@ com\.pxr\.pxrapi
 
 ###################################################
 # Smartisan framework.jar packages of PICO OS 5.13.7 ported from the factory framework
+smartisanos\.os
+smartisanos\.tnt
 smartisanos\.util
+
+###################################################
+# Boot classpath jars of PICO OS 5.13.7 outside framework.jar
+# telephony-ext.jar (CodeLinaro platform/vendor/codeaurora/telephony)
+org\.codeaurora\.internal
+# qcom.fmradio.jar (CodeLinaro platform/vendor/qcom-opensource/fm-commonsys)
+qcom\.fmradio
+# tcmiface.jar, QPerformance.jar, UxPerformance.jar, WfdCommon.jar (QTI)
+com\.quicinc\.tcmiface
+com\.qualcomm\.qti
+com\.qualcomm\.wfd
+com\.qualcomm\.wfd\.service
+# devicemiddlewareimpl.jar (PICO)
+picodevice\.device
+picodevice\.impl\.device
+picodevice\.impl\.schedule
+picodevice\.impl\.sysdatasync
+picodevice\.impl\.util
+picodevice\.internal
+picodevice\.policy
+picodevice\.schedule
+picodevice\.sysdatasync
