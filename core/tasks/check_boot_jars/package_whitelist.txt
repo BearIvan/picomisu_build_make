@@ -258,3 +258,7 @@ com\.pxr\.net\.common\.utils
 com\.pxr\.net\.common\.wifi
 com\.pxr\.net\.util
 com\.pxr\.pxrapi
+
+###################################################
+# Smartisan framework.jar packages of PICO OS 5.13.7 ported from the factory framework
+smartisanos\.util
